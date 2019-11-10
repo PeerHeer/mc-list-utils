@@ -1,6 +1,6 @@
 {
 	"pack": {
 		"pack_format": 1,
-		"description": "NBTree: binary tree datastructure in Minecraft."
+		"description": "NBTList: an abstraction for operations on NBT lists."
 	}
 }
