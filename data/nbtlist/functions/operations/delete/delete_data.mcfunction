@@ -1,8 +1,8 @@
 #> operations/delete/delete_index.mcfunction
-# Deletes an entry at a certain index.
+# Deletes an entry that matches certain data.
 #
-#> Returns to nbtlist:result:
-#   Success: 1b if operation successful, 0b otherwise.
+#> Returns:
+#   #nbtlist.operation.result.success nbtlist.var: 1 if operation successful, 0 otherwise.
 
 # Compare the data at Iterable[0] and Args.Data.
 function nbtlist:compare/compare_data
@@ -12,4 +12,3 @@ execute if score #nbtlist.compare.not_equal nbtlist.var matches 1 run data modif
 
 # If the data is equal, set the score #nbtlist.operation.result.success nbtlist.var to 1.
 execute if score #nbtlist.compare.not_equal nbtlist.var matches 0 run scoreboard players set #nbtlist.operation.result.success nbtlist.var 1
-execute store result storage nbtlist:result Success byte 1.0 run scoreboard players get #nbtlist.operation.result.success nbtlist.var

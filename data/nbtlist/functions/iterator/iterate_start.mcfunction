@@ -6,6 +6,9 @@ scoreboard players set #nbtlist.iterator.index nbtlist.var -1
 scoreboard players set #nbtlist.operation.result.success nbtlist.var 0
 scoreboard players set #nbtlist.iterator.stop nbtlist.var 0
 
+# Reset the results.
+function nbtlist:setup/storage/result
+
 # Load the list to iterate over into Iterable.
 data modify storage nbtlist:iterator Iterable set from storage nbtlist:args List
 

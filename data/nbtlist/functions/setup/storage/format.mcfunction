@@ -16,7 +16,7 @@ data modify storage nbtlist:format Args.List2 set value []
 # Format for the 'nbtlist:result' storage.
 data modify storage nbtlist:format Result.List set value []
 data modify storage nbtlist:format Result.Data set value {}
-data modify storage nbtlist:format Result.Index set value 0
+data modify storage nbtlist:format Result.Index set value -1
 data modify storage nbtlist:format Result.Success set value 0b
 
 # Format for the 'nbtlist:iterator' storage.
