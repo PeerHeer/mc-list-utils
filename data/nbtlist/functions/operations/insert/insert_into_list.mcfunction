@@ -1,4 +1,10 @@
+#> operations/insert/delete_index.mcfunction
+# Deletes an entry at a certain index.
+#
+#> Arguments:
+#   #nbtlist.operation.args.index nbtlist.var: index to insert at.
+
 # If insertion index is found, insert the data.
-execute if score #nbtlist.operation.insert.index nbtlist.var = #nbtlist.iterator.index nbtlist.var store success score #nbtlist.operation.success nbtlist.var run data modify storage nbtlist:operation Result.Insert.List append from storage nbtlist:iterator Params.Data
-execute store result storage nbtlist:operation Result.Insert.Success byte 1.0 run scoreboard players get #nbtlist.operation.success nbtlist.var
-data modify storage nbtlist:operation Result.Insert.List append from storage nbtlist:iterator Iterable[0]
+execute if score #nbtlist.operation.args.index nbtlist.var = #nbtlist.iterator.index nbtlist.var store success score #nbtlist.operation.result.success nbtlist.var run data modify storage nbtlist:iterator ResultList append from storage nbtlist:iterator Args.Data
+# Append element from Iterable to ResultList.
+data modify storage nbtlist:iterator ResultList append from storage nbtlist:iterator Iterable[0]

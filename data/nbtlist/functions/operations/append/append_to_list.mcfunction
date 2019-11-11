@@ -1,6 +1,11 @@
-# Append to list and store the success.
-execute store success score #nbtlist.operation.success nbtlist.var run data modify storage nbtlist:iterator Iterable append from storage nbtlist:operation Params.Append.Data
+#> operations/append/append_to_list.mcfunction
+# Appends data to the Iterable.
+#
+#> Returns:
+#   #nbtlist.operation.result.success nbtlist.var: the success of the operation
 
-# Store the result.
-execute store result storage nbtlist:operation Result.Append.Success byte 1.0 run scoreboard players get #nbtlist.operation.success nbtlist.var
-data modify storage nbtlist:operation Result.Append.List set from storage nbtlist:iterator Iterable
+# Append to list and store the success in a scoreboard variable.
+execute store success score #nbtlist.operation.result.success nbtlist.var run data modify storage nbtlist:iterator Iterable append from storage nbtlist:args Data
+
+# Set the ResultList to Iterable with the appended element.
+data modify storage nbtlist:iterator ResultList set from storage nbtlist:iterator Iterable

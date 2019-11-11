@@ -4,6 +4,7 @@
         "nbtlist:setup/scoreboard/setup_objectives",
         "nbtlist:setup/storage/format",
         "nbtlist:setup/storage/iterator",
-        "nbtlist:setup/storage/operation"
+        "nbtlist:setup/storage/result",
+        "nbtlist:setup/storage/args"
     ]
 }

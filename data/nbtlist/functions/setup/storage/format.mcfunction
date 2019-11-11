@@ -1,23 +1,25 @@
-#> nbtlist:setup/setup_storage/format
+#> setup/setup_storage/format
 # Setup the nbtlist:format storage.
-# This storage is meant to be used as a format for nbtlist:operation.
+#
+# This storage is used as a format for all other storages.
+# This format contains default values for these storages.
+#
+# This storage should not be changed by the user, unless he/she
+# knows what he/she is doing.
 
-# Parameters format.
-data modify storage nbtlist:format Operation.Params.Append set value {Data: {}}
-data modify storage nbtlist:format Operation.Params.Prepend set value {Data: {}}
-data modify storage nbtlist:format Operation.Params.Insert set value {Data: {}, Index: 0}
-data modify storage nbtlist:format Operation.Params.Delete set value {Data: {}, Index: 0}
-data modify storage nbtlist:format Operation.Params.Lookup set value {Data: {}, Index: 0}
-data modify storage nbtlist:format Operation.Params.Merge set value {List: []}
+# Format for the 'nbtlist:args' storage.
+data modify storage nbtlist:format Args.List set value []
+data modify storage nbtlist:format Args.Data set value {}
+data modify storage nbtlist:format Args.Index set value 0
+data modify storage nbtlist:format Args.List2 set value []
 
-# Input list.
-data modify storage nbtlist:format Operation.List set value []
+# Format for the 'nbtlist:result' storage.
+data modify storage nbtlist:format Result.List set value []
+data modify storage nbtlist:format Result.Data set value {}
+data modify storage nbtlist:format Result.Index set value 0
+data modify storage nbtlist:format Result.Success set value 0b
 
-# Result format.
-data modify storage nbtlist:format Operation.Result.Append set value {Success: 0b, List: []}
-data modify storage nbtlist:format Operation.Result.Prepend set value {Success: 0b, List: []}
-data modify storage nbtlist:format Operation.Result.Insert set value {Success: 0b, List: []}
-data modify storage nbtlist:format Operation.Result.Delete set value {Success: 0b, List: []}
-data modify storage nbtlist:format Operation.Result.Lookup set value {Success: 0b, Data: {}, Index: 0}
-data modify storage nbtlist:format Operation.Result.Merge set value {Success: 0b, List: []}
-
+# Format for the 'nbtlist:iterator' storage.
+data modify storage nbtlist:format Iterator.Iterable set value []
+data modify storage nbtlist:format Iterator.ResultList set value []
+data modify storage nbtlist:format Iterator.Compare set value {}

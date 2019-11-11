@@ -1,12 +1,16 @@
-# Initialize index and success variables.
+#> iterator/iterate_start.mcfucntion
+# Initializes and destorys the iterator.
+
+# Initialize index, success and stop variables.
 scoreboard players set #nbtlist.iterator.index nbtlist.var -1
-scoreboard players set #nbtlist.operation.success nbtlist.var 0
+scoreboard players set #nbtlist.operation.result.success nbtlist.var 0
 scoreboard players set #nbtlist.iterator.stop nbtlist.var 0
 
-# Load the list to iterate over.
-data modify storage nbtlist:iterator Iterable set from storage nbtlist:operation List
+# Load the list to iterate over into Iterable.
+data modify storage nbtlist:iterator Iterable set from storage nbtlist:args List
 
-# Check type of operation and load the appropriate parameters.
+# Check type of operation and load the appropriate arguments.
+# Execute operation immediately if it is append or prepend.
 # 0: append
 # 1: prepend
 # 2: insert
@@ -15,16 +19,26 @@ data modify storage nbtlist:iterator Iterable set from storage nbtlist:operation
 # 5: merge
 execute if score #nbtlist.iterator.operation nbtlist.var matches 0 run function nbtlist:operations/append/append_to_list
 execute if score #nbtlist.iterator.operation nbtlist.var matches 1 run function nbtlist:operations/prepend/prepend_to_list
-execute if score #nbtlist.iterator.operation nbtlist.var matches 2 run function nbtlist:operations/insert/load_params
-execute if score #nbtlist.iterator.operation nbtlist.var matches 3 run function nbtlist:operations/delete/load_params
-execute if score #nbtlist.iterator.operation nbtlist.var matches 4 run function nbtlist:operations/lookup/load_params
-execute if score #nbtlist.iterator.operation nbtlist.var matches 5 run function nbtlist:operations/merge/load_params
+execute if score #nbtlist.iterator.operation nbtlist.var matches 2 run function nbtlist:operations/insert/get_args
+execute if score #nbtlist.iterator.operation nbtlist.var matches 3 run function nbtlist:operations/delete/get_args
+execute if score #nbtlist.iterator.operation nbtlist.var matches 4 run function nbtlist:operations/lookup/get_args
+execute if score #nbtlist.iterator.operation nbtlist.var matches 5 run function nbtlist:operations/merge/get_args
 
 # Start iteration if the operation is not append or prepend.
 execute if score #nbtlist.iterator.operation nbtlist.var matches 2.. run function nbtlist:iterator/iterate
 
-# Reset storage and variables.
-data modify storage nbtlist:operation Params set from storage nbtlist:format Operation.Params
+# Return the resulting list.
+data modify storage nbtlist:result List set from storage nbtlist:iterator ResultList
+# Return the success of the operation.
+execute store result storage nbtlist:result Success byte 1.0 run scoreboard players get #nbtlist.operation.result.success nbtlist.var
+
+# Reset nbtlist:args storage.
+function nbtlist:setup/storage/args
+
+# Reset the nbtlist:iterator storage.
 data modify storage nbtlist:iterator Iterable set value []
-data remove storage nbtlist:iterator Params
+data modify storage nbtlist:iterator ResultList set value []
+data remove storage nbtlist:iterator Args
+
+# Reset the operation type.
 scoreboard players reset #nbtlist.iterator.operation nbtlist.var

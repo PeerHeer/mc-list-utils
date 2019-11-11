@@ -1,11 +1,14 @@
-#> iterate.mcfunction
-#
+#> iterator/iterate.mcfunction
+# Iterate over the list by deleting the first element unti the list is empty or #nbtlist.iterator.stop nbtlist.var is set.
+
+# Add one to the current index.
 scoreboard players add #nbtlist.iterator.index nbtlist.var 1
 
+# Do actions for each operation.
 execute if score #nbtlist.iterator.operation nbtlist.var matches 2 run function nbtlist:operations/insert/insert_into_list
 execute if score #nbtlist.iterator.operation nbtlist.var matches 3 run function nbtlist:operations/delete/delete_from_list
-# execute if score #nbtlist.iterator.operation nbtlist.var matches 4 run function nbtlist:operations/lookup/check
-# execute if score #nbtlist.iterator.operation nbtlist.var matches 5 run function nbtlist:operations/merge/load_params
+# execute if score #nbtlist.iterator.operation nbtlist.var matches 4 run function nbtlist:operations/lookup/...
+# execute if score #nbtlist.iterator.operation nbtlist.var matches 5 run function nbtlist:operations/merge/...
 
 
 # Remove the first element of the list.
