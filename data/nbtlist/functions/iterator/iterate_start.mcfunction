@@ -26,13 +26,14 @@ data modify storage nbtlist:iterator Iterable set from storage nbtlist:args List
 # 2: insert
 # 3: delete
 # 4: lookup
-# 5: merge
+# 5: extend
+# 6: reverse
+# 7: sort
 execute if score #nbtlist.iterator.operation nbtlist.var matches 0 run function nbtlist:operations/append/append_to_list
 execute if score #nbtlist.iterator.operation nbtlist.var matches 1 run function nbtlist:operations/prepend/prepend_to_list
 execute if score #nbtlist.iterator.operation nbtlist.var matches 2 run function nbtlist:operations/insert/get_args
 execute if score #nbtlist.iterator.operation nbtlist.var matches 3 run function nbtlist:operations/delete/get_args
 execute if score #nbtlist.iterator.operation nbtlist.var matches 4 run function nbtlist:operations/lookup/get_args
-execute if score #nbtlist.iterator.operation nbtlist.var matches 5 run function nbtlist:operations/merge/get_args
 
 # Start iteration if the operation is not append or prepend.
 execute if score #nbtlist.iterator.operation nbtlist.var matches 2.. run function nbtlist:iterator/iterate
