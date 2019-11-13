@@ -16,9 +16,6 @@ scoreboard players set #nbtlist.iterator.stop nbtlist.var 0
 # Reset the nbtlist:result storage to clear results for the operation.
 function nbtlist:setup/storage/result
 
-# Load the list to iterate over into Iterable.
-data modify storage nbtlist:iterator Iterable set from storage nbtlist:args List
-
 # Check type of operation and load the appropriate arguments.
 # Execute operation immediately if it is append or prepend.
 # 0: append
@@ -34,6 +31,10 @@ execute if score #nbtlist.iterator.operation nbtlist.var matches 1 run function 
 execute if score #nbtlist.iterator.operation nbtlist.var matches 2 run function nbtlist:operations/insert/get_args
 execute if score #nbtlist.iterator.operation nbtlist.var matches 3 run function nbtlist:operations/delete/get_args
 execute if score #nbtlist.iterator.operation nbtlist.var matches 4 run function nbtlist:operations/lookup/get_args
+execute if score #nbtlist.iterator.operation nbtlist.var matches 5 run function nbtlist:operations/extend/get_args
+
+# Load the list to iterate over into Iterable.
+data modify storage nbtlist:iterator Iterable set from storage nbtlist:args List
 
 # Start iteration if the operation is not append or prepend.
 execute if score #nbtlist.iterator.operation nbtlist.var matches 2.. run function nbtlist:iterator/iterate

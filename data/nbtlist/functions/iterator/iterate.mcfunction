@@ -8,6 +8,7 @@ scoreboard players add #nbtlist.iterator.index nbtlist.var 1
 execute if score #nbtlist.iterator.operation nbtlist.var matches 2 run function nbtlist:operations/insert/insert_into_list
 execute if score #nbtlist.iterator.operation nbtlist.var matches 3 run function nbtlist:operations/delete/delete_from_list
 execute if score #nbtlist.iterator.operation nbtlist.var matches 4 run function nbtlist:operations/lookup/lookup_in_list
+execute if score #nbtlist.iterator.operation nbtlist.var matches 5 run function nbtlist:operations/extend/extend_list
 
 
 # Remove the first element of the list.

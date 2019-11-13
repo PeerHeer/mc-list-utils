@@ -13,5 +13,5 @@ data modify storage nbtlist:args List set from storage nbtlist:format Args.List
 data modify storage nbtlist:args Data set from storage nbtlist:format Args.Data
 # Index: used as input index for 'insert', 'delete' and 'lookup' operations.
 data modify storage nbtlist:args Index set from storage nbtlist:format Args.Index
-# Index: used as second input list for the 'merge' operation.
+# Index: used as second input list for the 'extend' operation.
 data modify storage nbtlist:args List2 set from storage nbtlist:format Args.List2
