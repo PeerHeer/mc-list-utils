@@ -5,3 +5,11 @@ An abstraction for operations on NBT lists.
 - Namespace: `nbtlist`
 - Scorespace: `nbtlist`
 - Incompatible with: `none`
+
+### Planned features
+- Sorting (integer lists only)
+- Max (integer lists only)
+- Min (integer lists only)
+- Slicing
+- Popping
+- Negative indices for lookup
