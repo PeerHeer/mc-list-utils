@@ -12,4 +12,4 @@ An abstraction for operations on NBT lists.
 - Min (integer lists only)
 - Slicing
 - Popping
-- Negative indices for lookup
+- Negative indices for delete
