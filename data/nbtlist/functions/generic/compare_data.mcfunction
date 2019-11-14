@@ -1,4 +1,4 @@
-#> compare/compare_data.mcfunction
+#> generic/compare_data.mcfunction
 # Compares two data entries.
 #
 #> Arguments from nbtlist:iterator:

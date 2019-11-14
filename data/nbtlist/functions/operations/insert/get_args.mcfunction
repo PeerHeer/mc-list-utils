@@ -15,7 +15,7 @@ data modify storage nbtlist:iterator Args.Data set from storage nbtlist:args Dat
 execute store result score #nbtlist.operation.args.index nbtlist.var run data get storage nbtlist:iterator Args.Index
 scoreboard players set #nbtlist.operation.insert.append nbtlist.var 0
 execute if score #nbtlist.operation.args.index nbtlist.var matches -1 run scoreboard players set #nbtlist.operation.insert.append nbtlist.var 1
-execute if score #nbtlist.operation.args.index nbtlist.var matches ..-2 run function nbtlist:operations/insert/convert_negative_index
+execute if score #nbtlist.operation.args.index nbtlist.var matches ..-2 run function nbtlist:generic/convert_negative_index
 
 
 

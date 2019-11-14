@@ -6,5 +6,5 @@ execute store result score #nbtlist.length nbtlist.var run data get storage nbtl
 # Compute positive index.
 scoreboard players operation #nbtlist.length nbtlist.var += #nbtlist.operation.args.index nbtlist.var
 scoreboard players operation #nbtlist.operation.args.index nbtlist.var = #nbtlist.length nbtlist.var
-scoreboard players add #nbtlist.operation.args.index nbtlist.var 1
+execute if score #nbtlist.iterator.operation nbtlist.var matches 2 run scoreboard players add #nbtlist.operation.args.index nbtlist.var 1
 scoreboard players reset #nbtlist.length nbtlist.var
