@@ -15,3 +15,6 @@ execute if score #nbtlist.compare.not_equal nbtlist.var matches 0 run scoreboard
 execute if score #nbtlist.compare.not_equal nbtlist.var matches 0 store result storage nbtlist:result Index int 1.0 run scoreboard players get #nbtlist.iterator.index nbtlist.var
 # If data is equal, stop the iteration.
 execute if score #nbtlist.compare.not_equal nbtlist.var matches 0 run scoreboard players set #nbtlist.iterator.stop nbtlist.var 1
+
+tellraw @p ["",{"text":"Data Index: "},{"nbt":"Index","storage":"nbtlist:result"}]
+tellraw @p ["",{"text":"Score Index: "},{"score":{"name":"#nbtlist.iterator.index","objective":"nbtlist.var"}}]
