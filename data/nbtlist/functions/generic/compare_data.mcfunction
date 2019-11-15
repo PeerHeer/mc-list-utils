@@ -1,9 +1,9 @@
 #> generic/compare_data.mcfunction
 # Compares two data entries.
 #
-#> Arguments from nbtlist:iterator:
-#   Iterable[0]: the current iterable data.
-#   Args.Data: the data in the argument of the operation.
+#> Arguments:
+#   nbtlist:iterator Iterable[0]: the current iterable data.
+#   nbtlist:iterator Args.Data: the data in the argument of the operation.
 #> Returns:
 #   #nbtlist.compare.not_equal nbtlist.var: 1 if the data is not equal, 0 otherwise.
 

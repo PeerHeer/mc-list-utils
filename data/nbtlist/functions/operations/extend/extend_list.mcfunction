@@ -1,5 +1,5 @@
 #> operations/extend/extend_list.mcfunction
-# Appends an element from the iterable (List2) to the ResultList (List)
+# Appends an element from the iterable (List2) to the ResultList (List).
 #
 #> Returns:
 #   #nbtlist.operation.result.success nbtlist.var: 1 if successful, 0 otherwise.

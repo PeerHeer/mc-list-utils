@@ -3,10 +3,10 @@
 #
 #> Arguments:
 #   #nbtlist.iterator.operation nbtlist.var: the type of operation to execute.
-#
 #> Returns:
 #   nbtlist:result List: the list resulting from the operation.
 #   nbtlist:result Success: 1b if the operation was successful, 0b otherwise.
+#   #nbtlist.operation.result.success nbtlist.var: 1 if the operation was successful, 0 otherwise.
 
 # Initialize index & success variables.
 scoreboard players set #nbtlist.iterator.index nbtlist.var -1

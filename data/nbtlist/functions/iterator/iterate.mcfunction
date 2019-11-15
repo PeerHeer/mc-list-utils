@@ -1,5 +1,9 @@
 #> iterator/iterate.mcfunction
 # Iterate over the list by deleting the first element unti the list is empty or #nbtlist.iterator.stop nbtlist.var is set.
+#
+#> Arguments:
+#   #nbtlist.iterator.index nbtlist.var: the current iterator index.
+#   #nbtlist.iterator.operation nbtlist.var: the type of operation to execute.
 
 # Add one to the current index.
 scoreboard players add #nbtlist.iterator.index nbtlist.var 1

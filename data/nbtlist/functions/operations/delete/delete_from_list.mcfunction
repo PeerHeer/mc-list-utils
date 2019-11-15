@@ -2,9 +2,10 @@
 # Chooses to delete from index or data.
 #
 #> Arguments:
-#   #nbtlist.operation.args.index nbtlist.var: index to delete at
+#   #nbtlist.operation.has_data nbtlist.var: whether the data was specified or not.
 
-# If index is not -1, delete at index.
+# If no data was found, delete from index.
 execute if score #nbtlist.operation.has_data nbtlist.var matches 0 run function nbtlist:operations/delete/delete_index
-# If index is -1, delete at data.
+
+# If data was found, delet from data.
 execute unless score #nbtlist.operation.has_data nbtlist.var matches 0 run function nbtlist:operations/delete/delete_data

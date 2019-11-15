@@ -6,7 +6,7 @@
 # even when they are the same as the defaults sepecified here.
 #
 # This storage remains after every iteration, but there may be more active datapacks that make
-# use of NBTList. Therefore it is desirable to copy the results to a different storage.
+# use of NBT List. Therefore it is desirable to copy the results to a different storage.
 
 # List: contains the list that results from the operations prepend, append, insert, delete, extend, reverse and sort.
 data modify storage nbtlist:result List set from storage nbtlist:format Result.List

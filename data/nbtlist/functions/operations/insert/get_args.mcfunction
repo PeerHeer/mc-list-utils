@@ -1,9 +1,9 @@
 #> operations/insert/get_args.mcfunction
 # Get the arguments for the insert operation from 'nbtlist:args'.
 #
-#> Arguments from nbtlist:ags:
-#   Index: the index to insert at
-#   Data: the data to insert
+#> Arguments:
+#   nbtlist:args Index: the index to insert at.
+#   nbtlist:args Data: the data to insert.
 #> Returns:
 #   #nbtlist.operation.args.index nbtlist.var: the index to insert at.
 

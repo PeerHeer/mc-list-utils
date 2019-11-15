@@ -1,5 +1,6 @@
-#> operations/insert/delete_index.mcfunction
-# Deletes an entry at a certain index.
+#> operations/insert/insert_into_list.mcfunction
+# Inserts an element at a certain index.
+# Adds all elements of Iterable to ResultList, including the new element.
 #
 #> Arguments:
 #   #nbtlist.operation.args.index nbtlist.var: index to insert at.

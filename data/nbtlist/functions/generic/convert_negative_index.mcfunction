@@ -1,5 +1,10 @@
-#> operations/insert/convert_negative_index.mcfunction
-# Converts negative index to positive index.
+#> generic/convert_negative_index.mcfunction
+# Converts a negative index to a positive index.
+#
+#> Arguments:
+#   #nbtlist.operation.args.index nbtlist.var: the negative index to convert.
+#> Returns:
+#   #nbtlist.operation.args.index nbtlist.var: the converted positive index.
 
 # Get list length.
 execute store result score #nbtlist.length nbtlist.var run data get storage nbtlist:args List
