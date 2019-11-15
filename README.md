@@ -10,4 +10,3 @@ An abstraction for operations on NBT lists.
 - Sorting (integer lists only)
 - Max (integer lists only)
 - Min (integer lists only)
-- Slicing
