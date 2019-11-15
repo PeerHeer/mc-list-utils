@@ -16,5 +16,3 @@ execute store result score #nbtlist.operation.has_data nbtlist.var run data get 
 # If data is not present, store the index in the '#nbtlist.operation.args.index nbtlist.var' variable.
 execute if score #nbtlist.operation.has_data nbtlist.var matches 0 store result score #nbtlist.operation.args.index nbtlist.var run data get storage nbtlist:iterator Args.Index
 execute if score #nbtlist.operation.has_data nbtlist.var matches 0 if score #nbtlist.operation.args.index nbtlist.var matches ..-1 run function nbtlist:generic/convert_negative_index
-
-tellraw @p ["",{"score":{"name":"#nbtlist.operation.args.index","objective":"nbtlist.var"}}]
