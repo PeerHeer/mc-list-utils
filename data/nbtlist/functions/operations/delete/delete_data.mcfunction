@@ -11,4 +11,4 @@ function nbtlist:generic/compare_data
 execute if score #nbtlist.compare.not_equal nbtlist.var matches 1 run data modify storage nbtlist:iterator ResultList append from storage nbtlist:iterator Iterable[0]
 
 # If the data is equal, set the score #nbtlist.operation.result.success nbtlist.var to 1.
-execute if score #nbtlist.compare.not_equal nbtlist.var matches 0 run scoreboard players set #nbtlist.operation.result.success nbtlist.var 1
+execute if score #nbtlist.compare.not_equal nbtlist.var matches 0 store success score #nbtlist.operation.result.success nbtlist.var store result storage nbtlist:result Index int 1.0 run scoreboard players get #nbtlist.iterator.index nbtlist.var
