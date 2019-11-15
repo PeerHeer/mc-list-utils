@@ -11,4 +11,3 @@ An abstraction for operations on NBT lists.
 - Max (integer lists only)
 - Min (integer lists only)
 - Slicing
-- Popping
