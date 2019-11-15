@@ -11,6 +11,7 @@ execute if score #nbtlist.iterator.operation nbtlist.var matches 3 run function 
 execute if score #nbtlist.iterator.operation nbtlist.var matches 4 run function nbtlist:operations/lookup/lookup_in_list
 execute if score #nbtlist.iterator.operation nbtlist.var matches 5 run function nbtlist:operations/extend/extend_list
 execute if score #nbtlist.iterator.operation nbtlist.var matches 6 run function nbtlist:operations/reverse/reverse_list
+execute if score #nbtlist.iterator.operation nbtlist.var matches 7 run function nbtlist:operations/slice/slice_list
 
 
 # Remove the first element of the list.
