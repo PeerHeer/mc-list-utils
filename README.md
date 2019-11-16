@@ -7,7 +7,5 @@ An abstraction for operations on NBT lists.
 - Incompatible with: `none`
 
 ### Planned features
-- Max (integers only)
-- Min (integers only)
-- Randomizing elements
+- Shuffle
 - Error codes and error messages
