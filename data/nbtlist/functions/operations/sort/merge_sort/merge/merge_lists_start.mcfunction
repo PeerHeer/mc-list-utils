@@ -1,15 +1,21 @@
+#> operations/sort/merge_sort/merge/merge_lists_start.mcfunction
+# Initializes the merging of two MergedLists in MergeList.
+# After merging, the new MergedList is appended to the ResultList.
+
+# Initialize MergeList.
 data modify storage nbtlist:merge_sort MergeList append from storage nbtlist:merge_sort TempList[0]
 data modify storage nbtlist:merge_sort MergeList append from storage nbtlist:merge_sort TempList[1]
-data remove storage nbtlist:merge_sort TempList[0]
-# tellraw @p ["",{"text":"MergeList: "},{"nbt":"MergeList","storage":"nbtlist:merge_sort"}]
 
+# Initialize MergedList.
 data modify storage nbtlist:merge_sort MergedList set value []
-# Go to merge loop
+
+# Remove the TempList head.
+data remove storage nbtlist:merge_sort TempList[0]
+
+# Call the iterator that merges the lists.
+scoreboard players set #nbtlist.operation.merge_sort.stop nbtlist.var 0
 function nbtlist:operations/sort/merge_sort/merge/iterate_merge_list
 
-
-# tellraw @p ["",{"text":"MergedList after: "},{"nbt":"MergedList","storage":"nbtlist:merge_sort"}]
-# tellraw @p ["",{"text":"ResultList before: "},{"nbt":"ResultList","storage":"nbtlist:merge_sort"}]
+# Append the MergedList to the ResultList.
 data modify storage nbtlist:merge_sort ResultList append from storage nbtlist:merge_sort MergedList
-# tellraw @p ["",{"text":"ResultList after: "},{"nbt":"ResultList","storage":"nbtlist:merge_sort"}]
 
