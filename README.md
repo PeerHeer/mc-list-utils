@@ -7,7 +7,9 @@ An abstraction for operations on NBT lists.
 - Incompatible with: `none`
 
 ### Planned features
-- Sorting (integer lists only)
-- Max (integer lists only)
-- Min (integer lists only)
+- Support for user-created comparison functions
+- Max (integers only)
+- Min (integers only)
+- Replacing elements
+- Randomizing elements
 - Error codes and error messages
