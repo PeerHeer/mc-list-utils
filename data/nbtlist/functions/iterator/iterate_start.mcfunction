@@ -11,6 +11,7 @@
 # Initialize index & success variables.
 scoreboard players set #nbtlist.iterator.index nbtlist.var -1
 scoreboard players set #nbtlist.operation.result.success nbtlist.var 0
+scoreboard players set #nbtlist.operation.stop nbtlist.var 0
 
 
 # Reset the nbtlist:result storage to clear results for the operation.

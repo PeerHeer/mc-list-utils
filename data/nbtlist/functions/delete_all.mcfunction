@@ -1,5 +1,5 @@
 #> delete.mcfunction
-# Call this function to delete from a list.
+# Call this function to delete all elements that match Data from a list.
 #
 #> Arguments:
 #   nbtlist:args List: list to delete from
@@ -11,7 +11,7 @@
 
 # Sets operation type to 3 (delete).
 scoreboard players set #nbtlist.iterator.operation nbtlist.var 3
-scoreboard players set #nbtlist.operation.get_first nbtlist.var 1
+scoreboard players set #nbtlist.operation.get_first nbtlist.var 0
 
 # Start list iteration.
 function nbtlist:iterator/iterate_start

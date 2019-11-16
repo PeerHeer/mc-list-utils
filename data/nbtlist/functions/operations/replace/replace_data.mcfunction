@@ -19,6 +19,12 @@ data modify storage nbtlist:iterator Args.Data set from storage nbtlist:iterator
 # If the data is not equal, append to ResultList. This skips the element to replace and thus effectively replaces it.
 execute if score #nbtlist.compare.not_equal nbtlist.var matches 1 run data modify storage nbtlist:iterator ResultList append from storage nbtlist:iterator Iterable[0]
 
+# Keep appending to the resultlist if the operation stops.
+execute if score #nbtlist.compare.not_equal nbtlist.var matches 0 if score #nbtlist.operation.stop nbtlist.var matches 1 run data modify storage nbtlist:iterator ResultList append from storage nbtlist:iterator Iterable[0]
+
 # If the data is equal, set the score #nbtlist.operation.result.success nbtlist.var to 1 and return the current index.
-execute if score #nbtlist.compare.not_equal nbtlist.var matches 0 store success score #nbtlist.operation.result.success nbtlist.var run data modify storage nbtlist:iterator ResultList append from storage nbtlist:iterator Args.Data
-execute if score #nbtlist.compare.not_equal nbtlist.var matches 0 store result storage nbtlist:result Index int 1.0 run scoreboard players get #nbtlist.iterator.index nbtlist.var
+execute if score #nbtlist.operation.stop nbtlist.var matches 0 if score #nbtlist.compare.not_equal nbtlist.var matches 0 store success score #nbtlist.operation.result.success nbtlist.var run data modify storage nbtlist:iterator ResultList append from storage nbtlist:iterator Args.Data
+execute if score #nbtlist.operation.stop nbtlist.var matches 0 if score #nbtlist.compare.not_equal nbtlist.var matches 0 store result storage nbtlist:result Index int 1.0 run scoreboard players get #nbtlist.iterator.index nbtlist.var
+
+# Set #nbtlist.operation.stop nbtlist.var to 1 if the element was found and #nbtlist.operation.get_first was set.
+execute if score #nbtlist.operation.result.success nbtlist.var matches 1 if score #nbtlist.operation.get_first nbtlist.var matches 1 run scoreboard players set #nbtlist.operation.stop nbtlist.var 1
