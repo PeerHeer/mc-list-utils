@@ -31,6 +31,8 @@ function nbtlist:setup/storage/result
 # 7: slice
 # 8: replace
 # 9: count
+# 10: max
+# 11: min
 # 99: decomposition into individual lists
 execute if score #nbtlist.iterator.operation nbtlist.var matches 2 run function nbtlist:operations/insert/get_args
 execute if score #nbtlist.iterator.operation nbtlist.var matches 3 run function nbtlist:operations/delete/get_args

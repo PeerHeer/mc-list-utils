@@ -17,6 +17,8 @@ execute if score #nbtlist.iterator.operation nbtlist.var matches 6 run function 
 execute if score #nbtlist.iterator.operation nbtlist.var matches 7 run function nbtlist:operations/slice/slice_list
 execute if score #nbtlist.iterator.operation nbtlist.var matches 8 run function nbtlist:operations/replace/replace_in_list
 execute if score #nbtlist.iterator.operation nbtlist.var matches 9 run function nbtlist:operations/count/count_elements
+execute if score #nbtlist.iterator.operation nbtlist.var matches 10 run function nbtlist:operations/max/check_max_element
+execute if score #nbtlist.iterator.operation nbtlist.var matches 11 run function nbtlist:operations/min/check_min_element
 execute if score #nbtlist.iterator.operation nbtlist.var matches 99 run function nbtlist:operations/sort/merge_sort/decompose_list
 
 
