@@ -7,5 +7,6 @@ An abstraction for operations on NBT lists.
 - Incompatible with: `none`
 
 ### Planned features
+- Partial data lookups (e.g.`List[{ID: 0}}` returns `Data: {ID: 0, Tag: "something"}`)
 - Shuffle
 - Error codes and error messages
