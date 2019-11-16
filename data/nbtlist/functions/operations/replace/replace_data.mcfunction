@@ -21,6 +21,7 @@ execute if score #nbtlist.compare.not_equal nbtlist.var matches 1 run data modif
 
 # Keep appending to the resultlist if the operation stops.
 execute if score #nbtlist.compare.not_equal nbtlist.var matches 0 if score #nbtlist.operation.stop nbtlist.var matches 1 run data modify storage nbtlist:iterator ResultList append from storage nbtlist:iterator Iterable[0]
+execute if score #nbtlist.compare.not_equal nbtlist.var matches 0 if score #nbtlist.operation.stop nbtlist.var matches 0 run scoreboard players add #nbtlist.operation.result.count nbtlist.var 1
 
 # If the data is equal, set the score #nbtlist.operation.result.success nbtlist.var to 1 and return the current index.
 execute if score #nbtlist.operation.stop nbtlist.var matches 0 if score #nbtlist.compare.not_equal nbtlist.var matches 0 store success score #nbtlist.operation.result.success nbtlist.var run data modify storage nbtlist:iterator ResultList append from storage nbtlist:iterator Args.Data
