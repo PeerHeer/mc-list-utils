@@ -1,10 +1,12 @@
 {
     "replace": false,
     "values": [
-        "nbtlist:setup/scoreboard/setup_objectives",
+        "nbtlist:setup/scoreboard/objectives",
+        "nbtlist:setup/scoreboard/constants",
         "nbtlist:setup/storage/format",
         "nbtlist:setup/storage/iterator",
         "nbtlist:setup/storage/result",
-        "nbtlist:setup/storage/args"
+        "nbtlist:setup/storage/args",
+        "nbtlist:setup/storage/sort/merge_sort"
     ]
 }

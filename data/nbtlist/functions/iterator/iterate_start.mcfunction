@@ -18,13 +18,13 @@ function nbtlist:setup/storage/result
 
 # Check type of operation and load the appropriate arguments.
 # Execute operation immediately if it is append or prepend.
-# 1: sort
 # 2: insert
 # 3: delete
 # 4: lookup
 # 5: extend
 # 6: reverse
 # 7: slice
+# 99: decomposition into individual lists
 execute if score #nbtlist.iterator.operation nbtlist.var matches 2 run function nbtlist:operations/insert/get_args
 execute if score #nbtlist.iterator.operation nbtlist.var matches 3 run function nbtlist:operations/delete/get_args
 execute if score #nbtlist.iterator.operation nbtlist.var matches 4 run function nbtlist:operations/lookup/get_args
