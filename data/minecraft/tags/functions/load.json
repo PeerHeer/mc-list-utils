@@ -1,6 +1,6 @@
 {
 	"replace": false,
 	"values": [
-        "nbtlist:load"
+        "#nbtlist:setup"
 	]
 }

@@ -1,1 +1,0 @@
-function #nbtlist:setup
