@@ -24,12 +24,14 @@ function nbtlist:setup/storage/result
 # 5: extend
 # 6: reverse
 # 7: slice
+# 8: replace
 # 99: decomposition into individual lists
 execute if score #nbtlist.iterator.operation nbtlist.var matches 2 run function nbtlist:operations/insert/get_args
 execute if score #nbtlist.iterator.operation nbtlist.var matches 3 run function nbtlist:operations/delete/get_args
 execute if score #nbtlist.iterator.operation nbtlist.var matches 4 run function nbtlist:operations/lookup/get_args
 execute if score #nbtlist.iterator.operation nbtlist.var matches 5 run function nbtlist:operations/extend/get_args
 execute if score #nbtlist.iterator.operation nbtlist.var matches 7 run function nbtlist:operations/slice/get_args
+execute if score #nbtlist.iterator.operation nbtlist.var matches 8 run function nbtlist:operations/replace/get_args
 
 # Load the list to iterate over into Iterable.
 data modify storage nbtlist:iterator Iterable set from storage nbtlist:args List

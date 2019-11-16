@@ -10,7 +10,9 @@
 # Format for the 'nbtlist:args' storage.
 data modify storage nbtlist:format Args.List set value []
 data modify storage nbtlist:format Args.Data set value {}
+data modify storage nbtlist:format Args.Data2 set value 0
 data modify storage nbtlist:format Args.Index set value 0
+data modify storage nbtlist:format Args.Index2 set value 0
 data modify storage nbtlist:format Args.List2 set value []
 
 # Format for the 'nbtlist:result' storage.
