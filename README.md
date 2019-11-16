@@ -9,5 +9,6 @@ An abstraction for operations on NBT lists.
 ### Planned features
 - Max (integers only)
 - Min (integers only)
+- Count matching elements
 - Randomizing elements
 - Error codes and error messages
