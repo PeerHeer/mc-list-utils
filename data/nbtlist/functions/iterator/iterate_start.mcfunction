@@ -11,8 +11,12 @@
 # Initialize index & success variables.
 scoreboard players set #nbtlist.iterator.index nbtlist.var -1
 scoreboard players set #nbtlist.operation.result.success nbtlist.var 0
+
+# Initialize operation stop to 0.
 scoreboard players set #nbtlist.operation.stop nbtlist.var 0
 
+# Initialize the count to 0.
+scoreboard players set #nbtlist.operation.result.count nbtlist.var 0
 
 # Reset the nbtlist:result storage to clear results for the operation.
 function nbtlist:setup/storage/result
@@ -26,6 +30,7 @@ function nbtlist:setup/storage/result
 # 6: reverse
 # 7: slice
 # 8: replace
+# 9: count
 # 99: decomposition into individual lists
 execute if score #nbtlist.iterator.operation nbtlist.var matches 2 run function nbtlist:operations/insert/get_args
 execute if score #nbtlist.iterator.operation nbtlist.var matches 3 run function nbtlist:operations/delete/get_args
@@ -33,6 +38,7 @@ execute if score #nbtlist.iterator.operation nbtlist.var matches 4 run function 
 execute if score #nbtlist.iterator.operation nbtlist.var matches 5 run function nbtlist:operations/extend/get_args
 execute if score #nbtlist.iterator.operation nbtlist.var matches 7 run function nbtlist:operations/slice/get_args
 execute if score #nbtlist.iterator.operation nbtlist.var matches 8 run function nbtlist:operations/replace/get_args
+execute if score #nbtlist.iterator.operation nbtlist.var matches 9 run function nbtlist:operations/count/get_args
 
 # Load the list to iterate over into Iterable.
 data modify storage nbtlist:iterator Iterable set from storage nbtlist:args List
@@ -44,6 +50,8 @@ execute if score #nbtlist.iterator.stop nbtlist.var matches 0 run function nbtli
 data modify storage nbtlist:result List set from storage nbtlist:iterator ResultList
 # Return the success of the operation.
 execute store result storage nbtlist:result Success byte 1.0 run scoreboard players get #nbtlist.operation.result.success nbtlist.var
+# Return the count of the operation.
+execute store result storage nbtlist:result Count int 1.0 run scoreboard players get #nbtlist.operation.result.count nbtlist.var
 
 # Reset nbtlist:args storage.
 function nbtlist:setup/storage/args

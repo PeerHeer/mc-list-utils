@@ -16,6 +16,7 @@ execute if score #nbtlist.iterator.operation nbtlist.var matches 5 run function 
 execute if score #nbtlist.iterator.operation nbtlist.var matches 6 run function nbtlist:operations/reverse/reverse_list
 execute if score #nbtlist.iterator.operation nbtlist.var matches 7 run function nbtlist:operations/slice/slice_list
 execute if score #nbtlist.iterator.operation nbtlist.var matches 8 run function nbtlist:operations/replace/replace_in_list
+execute if score #nbtlist.iterator.operation nbtlist.var matches 9 run function nbtlist:operations/count/count_elements
 execute if score #nbtlist.iterator.operation nbtlist.var matches 99 run function nbtlist:operations/sort/merge_sort/decompose_list
 
 

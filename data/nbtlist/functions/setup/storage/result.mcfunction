@@ -16,3 +16,5 @@ data modify storage nbtlist:result Data set from storage nbtlist:format Result.D
 data modify storage nbtlist:result Success set from storage nbtlist:format Result.Success
 # Index: contains the index that results from the 'lookup' operation.
 data modify storage nbtlist:result Index set from storage nbtlist:format Result.Index
+# Count: contains the amount of entries found by the 'count' operation.
+data modify storage nbtlist:result Count set from storage nbtlist:format Result.Count
