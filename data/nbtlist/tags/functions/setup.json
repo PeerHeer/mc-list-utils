@@ -2,7 +2,7 @@
     "replace": false,
     "values": [
         "nbtlist:setup/scoreboard/objectives",
-        "nbtlist:setup/scoreboard/constants",
+        "nbtlist:setup/scoreboard/variables",
         "nbtlist:setup/storage/format",
         "nbtlist:setup/storage/iterator",
         "nbtlist:setup/storage/result",
