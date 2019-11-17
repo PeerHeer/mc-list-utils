@@ -1,4 +1,4 @@
-# NBT List
+# Dynamic NBT Lists
 An abstraction for operations on NBT lists.
 
 ### Compatibility information
