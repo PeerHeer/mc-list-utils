@@ -15,7 +15,7 @@
 # Default comparison functions.
 # Generic: can be used for all kinds of elements. Works as expected for ints, shorts and bytes.
 #          works using length for compounds, lists and strings.
-execute if score #nbtlist.compare.function nbtlist.var matches 0 run function nbtlist:comparison_functions/compare_generic
+execute if score #nbtlist.compare.function nbtlist.var matches 0 run function nbtlist:comparison_functions/default/compare_generic
 execute if score #nbtlist.compare.function nbtlist.var matches 1 run function nbtlist:comparison_functions/default/compare_ints
 execute if score #nbtlist.compare.function nbtlist.var matches 2 run function nbtlist:comparison_functions/default/compare_longs
 

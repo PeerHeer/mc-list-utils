@@ -1,3 +1,11 @@
+#> comparison_functions/default/compare_generic.mcfunction
+# Compares two values of any type.
+#
+#> Arguments:
+#   nbtlist:compare Compare: contains the elements to compare.
+#> Returns:
+#   #nbtlist.compare.result nbtlist.var: -1 if the left value is smaller, 0 if the values are equal, 1 if the right value is smaller.
+
 # Store the data from the compare list into scores.
 # The value stored is a number for long, int, short and byte values.
 # The value stored is the length for a string, compound or list.
