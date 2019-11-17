@@ -1,4 +1,4 @@
-#> comparison_functions/compare_ints.mcfunction
+#> comparison_functions/default/compare_ints.mcfunction
 # Compare two integers.
 #
 #> Arguments:
