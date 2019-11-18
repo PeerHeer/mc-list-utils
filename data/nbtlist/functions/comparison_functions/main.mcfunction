@@ -18,6 +18,7 @@
 execute if score #nbtlist.compare.function nbtlist.var matches 0 run function nbtlist:comparison_functions/default/compare_generic
 execute if score #nbtlist.compare.function nbtlist.var matches 1 run function nbtlist:comparison_functions/default/compare_ints
 execute if score #nbtlist.compare.function nbtlist.var matches 2 run function nbtlist:comparison_functions/default/compare_longs
+execute if score #nbtlist.compare.function nbtlist.var matches 3 run function nbtlist:comparison_functions/default/compare_floats
 
 ################################################
 # Place your custom comparison functions here. #
