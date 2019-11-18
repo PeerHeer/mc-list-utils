@@ -27,4 +27,6 @@ execute if score #nbtlist.generic.float_fractions.pos nbtlist.var matches 335544
 execute if score #nbtlist.generic.float_fractions.pos nbtlist.var matches 67108864..134217727 run function nbtlist:generic/float_fractions/helpers/67108864
 execute if score #nbtlist.generic.float_fractions.pos nbtlist.var matches 134217728..268435455 run function nbtlist:generic/float_fractions/helpers/134217728
 execute if score #nbtlist.generic.float_fractions.pos nbtlist.var matches 268435456..536870911 run function nbtlist:generic/float_fractions/helpers/268435456
-execute if score #nbtlist.generic.float_fractions.pos nbtlist.var matches 536870912.. run function nbtlist:generic/float_fractions/helpers/536870912
+execute if score #nbtlist.generic.float_fractions.pos nbtlist.var matches 536870912..1073741823 run function nbtlist:generic/float_fractions/helpers/536870912
+execute if score #nbtlist.generic.float_fractions.pos nbtlist.var matches 1073741824..2147483646 run function nbtlist:generic/float_fractions/helpers/1073741824
+execute if score #nbtlist.generic.float_fractions.pos nbtlist.var matches 2147483647.. run function nbtlist:generic/float_fractions/helpers/2147483647
