@@ -1,5 +1,5 @@
 # Dynamic NBT Lists
-An abstraction for operations on NBT lists.
+An abstraction for dynamic operations on NBT lists.
 
 ### Compatibility information
 - Namespace: `nbtlist`
