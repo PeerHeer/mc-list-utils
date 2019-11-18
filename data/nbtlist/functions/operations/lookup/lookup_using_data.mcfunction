@@ -15,6 +15,7 @@ execute if score #nbtlist.compare.result nbtlist.var matches 0 run scoreboard pl
 
 # If data is equal, return the index.
 execute if score #nbtlist.compare.result nbtlist.var matches 0 store result storage nbtlist:result Index int 1.0 run scoreboard players get #nbtlist.iterator.index nbtlist.var
+execute if score #nbtlist.compare.result nbtlist.var matches 0 run data modify storage nbtlist:result Data set from storage nbtlist:iterator Iterable[0]
 
 # If data is equal, stop the iteration.
 execute if score #nbtlist.compare.result nbtlist.var matches 0 run scoreboard players set #nbtlist.iterator.stop nbtlist.var 1
