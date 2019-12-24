@@ -15,7 +15,7 @@ execute unless score $dynalist.compare.function dynalist.in matches 0 run scoreb
 execute if score $dynalist.success dynalist.out matches 0 run scoreboard players set $dynalist.iterator.length dynalist.var -1
 
 # If the list contains the element, start iteration.
-execute if score $dynalist.success dynalist.out matches 1 run function dynalist:_operations/indexof/iterate_start
+execute if score $dynalist.success dynalist.out matches 1 run function dynalist:_operations/index_of/iterate_start
 
 # Output the result.
 scoreboard players operation $dynalist.result dynalist.out = $dynalist.iterator.length dynalist.var
