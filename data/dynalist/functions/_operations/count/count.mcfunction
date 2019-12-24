@@ -1,6 +1,7 @@
 # Author: PeerHeer
 #
-# Check how many times a list contains a specific element
+# Check how many times a list contains a specific element.
+# Returns the amount of times the element occurs in the list.
 
 # Make a copy of the list.
 data modify storage dynalist:copies Count.List set from storage dynalist:in List

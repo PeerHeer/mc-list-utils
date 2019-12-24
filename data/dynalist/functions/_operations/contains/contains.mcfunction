@@ -1,6 +1,7 @@
 # Author: PeerHeer
 #
 # Check if a list contains a specified element.
+# Returns 1 if the list contains the element, 0 otherwise.
 
 # Make a copy of the list.
 data modify storage dynalist:copies Contains.List set from storage dynalist:in List
