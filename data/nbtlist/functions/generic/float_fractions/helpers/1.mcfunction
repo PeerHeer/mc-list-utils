@@ -1,1 +1,0 @@
-execute positioned ~ ~-1 ~ run teleport @s ~ ~ ~
