@@ -1,6 +1,6 @@
 {
 	"replace": false,
 	"values": [
-        "dynalist:load"
+        "dynalist:_setup/load"
 	]
 }
