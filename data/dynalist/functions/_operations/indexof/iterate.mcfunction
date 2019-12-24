@@ -6,7 +6,11 @@
 data modify storage dynalist:compare DataL set from storage dynalist:iterator Iterable[-1]
 
 # Compare the last element with the input data.
-function dynalist:_compare/compare_equal
+function dynalist:_compare/main
+
+# DEBUG
+# tellraw @p ["Compare function: ",{"score":{"name":"$dynalist.compare.function","objective":"dynalist.in"}}]
+# tellraw @p ["Compare result: ",{"score":{"name":"$dynalist.compare.result","objective":"dynalist.var"}}]
 
 # Remove the last element from the Iterable and decrement its length.
 data remove storage dynalist:iterator Iterable[-1]
