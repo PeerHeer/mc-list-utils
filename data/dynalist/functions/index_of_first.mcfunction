@@ -1,7 +1,7 @@
 # Author: PeerHeer
 #
 #> Description
-# The 'index_of' operation finds the last index where an element occurs.
+# The 'index_of_first' operation finds the first index where an element occurs.
 #
 #> Arguments
 # - dynalist:in List: the list that contains the element.
@@ -10,6 +10,6 @@
 #
 #> Return values
 # - $dynalist.success dynalist.out: 1 for success, 0 otherwise.
-# - dynalist:out Data: the data that was found at the index.
+# - $dynalist.result dynalist.out: the index of the data.
 
-function dynalist.private:index_of
+function dynalist.private:index_of_first
