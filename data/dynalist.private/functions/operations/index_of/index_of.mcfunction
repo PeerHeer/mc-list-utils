@@ -5,11 +5,11 @@
 # If the element does not exist in the list, the returned index is -1.
 
 # Check if the list contains the element.
-execute if score $dynalist.compare.function dynalist.in matches 0 run function dynalist.private:operations/contains/contains
+execute if score $dynalist.function dynalist.in matches 0 run function dynalist.private:operations/contains/contains
 
 # If a different function than the default was used, the list is iterated through.
-execute unless score $dynalist.compare.function dynalist.in matches 0 run function dynalist.private:internal/length
-execute unless score $dynalist.compare.function dynalist.in matches 0 run scoreboard players set $dynalist.success dynalist.out 1
+execute unless score $dynalist.function dynalist.in matches 0 run function dynalist.private:internal/length
+execute unless score $dynalist.function dynalist.in matches 0 run scoreboard players set $dynalist.success dynalist.out 1
 
 # If the list does not contain the element, the result will be -1.
 execute if score $dynalist.success dynalist.out matches 0 run scoreboard players set $dynalist.iterator.length dynalist.var -1

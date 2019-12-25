@@ -7,4 +7,4 @@ scoreboard players set $dynalist.success dynalist.out 0
 scoreboard players set $dynalist.error.success dynalist.var 1
 
 # If the comparison function is not set, set it to 0 (default).
-execute unless score $dynalist.compare.function dynalist.in = $dynalist.compare.function dynalist.in run scoreboard players set $dynalist.compare.function dynalist.in 0
+execute unless score $dynalist.function dynalist.in = $dynalist.function dynalist.in run scoreboard players set $dynalist.function dynalist.in 0
