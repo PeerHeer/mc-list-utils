@@ -5,7 +5,7 @@
 #
 #> Arguments
 # - dynalist:in List: the list that contains the element.
-# - $dynalist.index dynalist.in: the element to find the index of.
+# - dynalist:in Data: the element to find the index of.
 # - [OPTIONAL] $dynalist.function dynalist.in: the comparison function to use (default: 0).
 #
 #> Return values

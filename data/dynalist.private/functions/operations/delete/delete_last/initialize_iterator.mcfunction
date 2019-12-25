@@ -2,9 +2,6 @@
 #
 # Initialize the iterator.
 
-# Initialize scores.
-scoreboard players set $dynalist.result dynalist.out 0
-
 # Set iterable length.
 scoreboard players operation $dynalist.iterator.length dynalist.var = $dynalist.length.result dynalist.var
 
