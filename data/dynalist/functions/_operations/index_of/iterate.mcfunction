@@ -6,7 +6,7 @@
 data modify storage dynalist:compare DataL set from storage dynalist:iterator Iterable[-1]
 
 # Compare the last element with the input data.
-function dynalist:_compare/main
+function dynalist.custom:compare/main
 
 # Remove the last element from the Iterable and decrement its length.
 data remove storage dynalist:iterator Iterable[-1]
