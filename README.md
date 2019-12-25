@@ -2,6 +2,6 @@
 An abstraction for dynamic operations on NBT lists.
 
 ### Compatibility information
-- Namespace: `dynalist`
+- Namespaces: `dynalist`, `dynalist.private`
 - Scorespace: `dynalist`
 - Incompatible with: `none`
