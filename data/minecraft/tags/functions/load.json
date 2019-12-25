@@ -1,6 +1,6 @@
 {
 	"replace": false,
 	"values": [
-        "dynalist:_setup/load"
+        "dynalist.private:setup/load"
 	]
 }

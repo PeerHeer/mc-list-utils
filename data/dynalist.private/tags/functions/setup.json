@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "dynalist.private:setup/objectives",
+        "dynalist.private:setup/storage"
+    ]
+}

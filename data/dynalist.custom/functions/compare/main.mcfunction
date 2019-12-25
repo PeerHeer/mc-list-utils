@@ -8,8 +8,8 @@
 ######################
 # Standard functions #
 ######################
-execute if score $dynalist.compare.function dynalist.in matches 0 run function dynalist:_operation_functions/compare/compare_equal
-execute if score $dynalist.compare.function dynalist.in matches 1 run function dynalist:_operation_functions/compare/compare_subset
+execute if score $dynalist.compare.function dynalist.in matches 0 run function dynalist.private:operation_functions/compare/compare_equal
+execute if score $dynalist.compare.function dynalist.in matches 1 run function dynalist.private:operation_functions/compare/compare_subset
 
 ####################
 # Custom functions #

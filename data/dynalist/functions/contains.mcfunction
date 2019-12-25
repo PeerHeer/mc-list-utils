@@ -1,2 +1,1 @@
-function dynalist:_operations/initialize
-function dynalist:_operations/contains/contains
+function dynalist.private:contains
