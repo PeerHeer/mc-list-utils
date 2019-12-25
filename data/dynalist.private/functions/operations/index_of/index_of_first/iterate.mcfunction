@@ -2,6 +2,9 @@
 #
 # Iterates over the list.
 
+# Add to the index.
+scoreboard players add $dynalist.iterator.index dynalist.var 1
+
 # Copy the last element in the list to compare it.
 data modify storage dynalist.private:compare Root.DataL set from storage dynalist.private:iterator Root.Iterable[0]
 

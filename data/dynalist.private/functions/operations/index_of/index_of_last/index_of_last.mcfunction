@@ -5,7 +5,7 @@
 # If the element does not exist in the list, the returned index is -1.
 
 # Check if the list contains the element.
-execute if score $dynalist.function dynalist.in matches 0 run function dynalist.private:operations/contains/contains
+execute if score $dynalist.function dynalist.in matches 0 run function dynalist.private:operations/contains/exact_match/contains
 
 # If a different function than the default was used, the list is iterated through.
 execute unless score $dynalist.function dynalist.in matches 0 run function dynalist.private:internal/length

@@ -13,7 +13,7 @@ function dynalist.private:internal/length
 execute store success score $dynalist.operation.success dynalist.var store result score $dynalist.operation.diff dynalist.var run data modify storage dynalist:copies Count.List[] set from storage dynalist:in Data
 
 # If there are elements that were not successfully modified, check the types and return the result.
-execute unless score $dynalist.length.result dynalist.var matches 0 unless score $dynalist.operation.diff dynalist.var = $dynalist.length.result dynalist.var run function dynalist.private:operations/contains/diff_neq_length
+execute unless score $dynalist.length.result dynalist.var matches 0 unless score $dynalist.operation.diff dynalist.var = $dynalist.length.result dynalist.var run function dynalist.private:operations/count/exact_match/diff_neq_length
 
 # Output the result of the operation.
 scoreboard players operation $dynalist.result dynalist.out = $dynalist.length.result dynalist.var
