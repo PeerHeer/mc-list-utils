@@ -10,7 +10,6 @@ data modify storage dynalist:out List prepend from storage dynalist.private:iter
 
 # Remove the last element from the Iterable.
 data remove storage dynalist.private:iterator Root.Iterable[-1]
-say iterate_end
 
 # If the operation was unsuccessful, and the list is not empty, go to the next iteration.
 execute unless score $dynalist.iterator.length dynalist.var = $dynalist.iterator.index.first dynalist.var unless score $dynalist.iterator.length dynalist.var matches 0 run function dynalist.private:operations/slice/iterate_end
