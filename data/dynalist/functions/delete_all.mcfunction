@@ -1,7 +1,7 @@
 # Author: PeerHeer
 #
 #> Description
-# The 'delete_all' deletes all occurrances of an element in a list.
+# The 'delete_all' deletes all occurrences of an element in a list.
 #
 #> Arguments
 # - dynalist:in List: the list that contains the element.

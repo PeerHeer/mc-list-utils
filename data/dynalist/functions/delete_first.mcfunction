@@ -1,7 +1,7 @@
 # Author: PeerHeer
 #
 #> Description
-# The 'delete_first' deletes the first occurrance of an element in a list.
+# The 'delete_first' deletes the first occurrence of an element in a list.
 #
 #> Arguments
 # - dynalist:in List: the list that contains the element.

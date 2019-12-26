@@ -1,15 +1,14 @@
 # Author: PeerHeer
 #
 #> Description
-# The 'delete_last' deletes the last occurrence of an element in a list.
+# The 'delete_index' deletes the element at an index.
 #
 #> Arguments
 # - dynalist:in List: the list that contains the element.
-# - dynalist:in Data: the element to delete.
-# - [OPTIONAL] $dynalist.function dynalist.in: the comparison function to use (default: 0).
+# - $dynalist.index dynalist.in: the index to delete.
 #
 #> Return values
 # - $dynalist.success dynalist.out: 1 for success, 0 otherwise.
 # - dynalist:out List: original list without the deleted element.
 
-function dynalist.private:delete_last
+function dynalist.private:delete_index
