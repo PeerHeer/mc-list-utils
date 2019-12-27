@@ -13,5 +13,6 @@ scoreboard players operation $dynalist.current_index dynalist.in = $dynalist.len
 data modify storage dynalist.private:iterator Root.Iterable set from storage dynalist:in List
 
 # Initialize the results to the default value.
-data modify storage dynalist:fold Result set value {}
-scoreboard players set $dynalist.fold dynalist.out 0
+data modify storage dynalist:fold Result set from storage dynalist:in Data
+data modify storage dynalist:fold Out set value {}
+scoreboard players operation $dynalist.fold dynalist.out = $dynalist.init_value dynalist.in

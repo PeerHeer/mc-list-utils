@@ -5,6 +5,8 @@
 #
 #> Arguments
 # - dynalist:in List: the list to fold.
+# - [OPTIONAL] dynalist:in Data: the initial value of the result (NBT).
+# - [OPTIONAL] $dynalist.init_value dynalist.in: the initial value of the result (score, default: 0).
 # - [OPTIONAL] $dynalist.function dynalist.in: the fold function to use (default: 0).
 #
 #> Return values
