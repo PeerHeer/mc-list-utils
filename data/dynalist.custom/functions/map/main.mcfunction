@@ -8,7 +8,7 @@
 ######################
 # Standard functions #
 ######################
-execute if score $dynalist.function dynalist.in matches 0 run function dynalist.private:operation_functions/map/map_copy
+execute if score $dynalist.function dynalist.in matches 0 run function dynalist.custom:map/functions/built_in/map_copy
 
 ####################
 # Custom functions #

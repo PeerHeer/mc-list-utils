@@ -8,7 +8,7 @@
 ######################
 # Standard functions #
 ######################
-execute if score $dynalist.function dynalist.in matches 0 run function dynalist.private:operation_functions/filter/filter_data_get
+execute if score $dynalist.function dynalist.in matches 0 run function dynalist.custom:filter/functions/built_in/filter_data_get
 
 ####################
 # Custom functions #

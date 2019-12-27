@@ -8,9 +8,9 @@
 ######################
 # Standard functions #
 ######################
-execute if score $dynalist.function dynalist.in matches 0 run function dynalist.private:operation_functions/fold/sum
-execute if score $dynalist.function dynalist.in matches 1 run function dynalist.private:operation_functions/fold/all
-execute if score $dynalist.function dynalist.in matches 2 run function dynalist.private:operation_functions/fold/any
+execute if score $dynalist.function dynalist.in matches 0 run function dynalist.custom:fold/functions/built_in/sum
+execute if score $dynalist.function dynalist.in matches 1 run function dynalist.custom:fold/functions/built_in/all
+execute if score $dynalist.function dynalist.in matches 2 run function dynalist.custom:fold/functions/built_in/any
 
 ####################
 # Custom functions #
