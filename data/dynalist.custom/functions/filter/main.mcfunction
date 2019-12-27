@@ -1,7 +1,7 @@
 # Author: PeerHeer
 #
-# Executes a comparison function depending on the $dynalist.function score provided by the user.
-# Defaults to compare_equal.
+# Executes a filter function depending on the $dynalist.function score provided by the user.
+# Defaults to filter_data_get.
 #
 # TODO: custom filter functions
 

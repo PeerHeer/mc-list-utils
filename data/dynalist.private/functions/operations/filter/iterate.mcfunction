@@ -6,7 +6,7 @@
 scoreboard players remove $dynalist.current_index dynalist.in 1
 
 # Set the current element in the dynalist:filter storage
-data modify storage dynalist:filter Current set from storage dynalist.private:iterator Root.Iterable[-1]
+data modify storage dynalist:filter In set from storage dynalist.private:iterator Root.Iterable[-1]
 
 # Call a filter function.
 function dynalist.custom:filter/main
