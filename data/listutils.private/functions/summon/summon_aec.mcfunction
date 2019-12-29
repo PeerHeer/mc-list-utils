@@ -1,0 +1,1 @@
+execute positioned -30000000 0 8000 align xyz positioned ~0.5 ~0.5 ~0.5 unless entity @e[distance=..0.1, tag=listutils.entity, limit=1] run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["listutils.entity"], Age: -2147483648, Duration: -1, WaitTime: -2147483648}

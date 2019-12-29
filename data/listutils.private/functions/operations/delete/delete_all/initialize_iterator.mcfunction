@@ -1,0 +1,15 @@
+# Author: PeerHeer
+#
+# Initialize the iterator.
+
+# Initialize scores.
+scoreboard players set $listutils.result listutils.out 0
+
+# Set iterable length.
+scoreboard players operation $listutils.iterator.length listutils.var = $listutils.length listutils.var
+
+# Copy the list into the iterator.
+data modify storage listutils.private:iterator Root.Iterable set from storage listutils:in List
+
+# Copy data to DataR for comparison.
+data modify storage listutils.private:compare Root.DataR set from storage listutils:in Data
