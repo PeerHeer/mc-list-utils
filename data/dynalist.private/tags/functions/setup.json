@@ -2,6 +2,7 @@
     "replace": false,
     "values": [
         "dynalist.private:setup/objectives",
-        "dynalist.private:setup/storage"
+        "dynalist.private:setup/storage",
+        "dynalist.private:setup/forceload"
     ]
 }

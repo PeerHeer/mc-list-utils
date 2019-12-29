@@ -18,7 +18,7 @@ execute if score $dynalist.success dynalist.out matches 0 run scoreboard players
 execute if score $dynalist.success dynalist.out matches 1 run function dynalist.private:operations/index_of/index_of_first/iterate_start
 
 # If the comparison was not successful, set the index to -1.
-execute unless score $dynalist.compare.result dynalist.var matches 0 run scoreboard players set $dynalist.iterator.index dynalist.var -1
+execute unless score $dynalist.compare.result dynalist.out matches 0 run scoreboard players set $dynalist.iterator.index dynalist.var -1
 
 # Output the result.
 scoreboard players operation $dynalist.result dynalist.out = $dynalist.iterator.index dynalist.var

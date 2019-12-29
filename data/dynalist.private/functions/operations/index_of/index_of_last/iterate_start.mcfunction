@@ -9,5 +9,5 @@ function dynalist.private:operations/index_of/index_of_last/initialize_iterator
 execute unless score $dynalist.iterator.length dynalist.var matches 0 run function dynalist.private:operations/index_of/index_of_last/iterate
 
 # If the comparison was not successful, set the length to -1.
-execute unless score $dynalist.compare.result dynalist.var matches 0 run scoreboard players set $dynalist.iterator.length dynalist.var -1
+execute unless score $dynalist.compare.result dynalist.out matches 0 run scoreboard players set $dynalist.iterator.length dynalist.var -1
 

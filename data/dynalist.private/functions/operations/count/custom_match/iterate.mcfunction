@@ -8,7 +8,7 @@ data modify storage dynalist.private:compare Root.DataL set from storage dynalis
 # Compare the last element with the input data.
 function dynalist.custom:compare/main
 
-execute if score $dynalist.compare.result dynalist.var matches 0 run scoreboard players add $dynalist.result dynalist.out 1
+execute if score $dynalist.compare.result dynalist.out matches 0 run scoreboard players add $dynalist.result dynalist.out 1
 
 # Remove the last element from the Iterable and decrement its length.
 data remove storage dynalist.private:iterator Root.Iterable[-1]

@@ -12,7 +12,7 @@ data modify storage dynalist.private:compare Root.DataL set from storage dynalis
 function dynalist.custom:compare/main
 
 # Append the index to the result list.
-execute if score $dynalist.compare.result dynalist.var matches 0 run function dynalist.private:operations/index_of/index_of_all/append_index
+execute if score $dynalist.compare.result dynalist.out matches 0 run function dynalist.private:operations/index_of/index_of_all/append_index
 
 # Remove the last element from the Iterable.
 data remove storage dynalist.private:iterator Root.Iterable[-1]

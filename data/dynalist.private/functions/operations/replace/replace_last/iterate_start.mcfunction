@@ -9,5 +9,5 @@ function dynalist.private:operations/replace/replace_last/initialize_iterator
 execute unless score $dynalist.iterator.length dynalist.var matches 0 run function dynalist.private:operations/replace/replace_last/iterate
 
 # If no element was found, set the success to 0.
-execute unless score $dynalist.compare.result dynalist.var matches 0 run scoreboard players set $dynalist.success dynalist.out 0
+execute unless score $dynalist.compare.result dynalist.out matches 0 run scoreboard players set $dynalist.success dynalist.out 0
 

@@ -13,4 +13,4 @@ data remove storage dynalist.private:iterator Root.Iterable[-1]
 scoreboard players remove $dynalist.iterator.length dynalist.var 1
 
 # If the comparison was unsuccessful, and the list is not empty, go to the next iteration.
-execute unless score $dynalist.compare.result dynalist.var matches 0 unless score $dynalist.iterator.length dynalist.var matches 0 run function dynalist.private:operations/contains/custom_match/iterate
+execute unless score $dynalist.compare.result dynalist.out matches 0 unless score $dynalist.iterator.length dynalist.var matches 0 run function dynalist.private:operations/contains/custom_match/iterate
