@@ -2,6 +2,7 @@
     "replace": false,
     "values": [
         "listutils.private:setup/objectives",
+        "listutils.private:setup/scores",
         "listutils.private:setup/storage",
         "listutils.private:setup/forceload"
     ]
